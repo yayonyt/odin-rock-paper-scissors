@@ -4,8 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
-    <script src="/main.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
   </head>
-  <body>    
+  <body>
+    <h1>Rock Paper Scissors</h1>
+    <p class="subtitle">Best of 5 wins!</p>
+
+    <div class="container">
+      <!-- Game Action Panel -->
+      <div class="panel" id="game">
+        <h2>
+          Choose Your Move!
+          <span id="roundsLeft">Rounds Left: 5</span>
+        </h2>
+
+        <div class="actions">
+          <button id="rock" class="btn-choice">
+            <span>✊</span>
+            Rock
+          </button>
+          <button id="paper" class="btn-choice">
+            <span>✋</span>
+            Paper
+          </button>
+          <button id="scissors" class="btn-choice">
+            <span>✌️</span>
+            Scissors
+          </button>
+        </div>
+
+        <div class="final-result-container">
+          <div id="finalResult">The game isn't over yet!</div>
+        </div>
+      </div>
+
+      <!-- Results & Scoreboard Panel -->
+      <div class="panel" id="result">
+        <h2>Scoreboard</h2>
+        
+        <div class="scores">
+          <div class="score-card">
+            <span class="score-name">Human</span>
+            <span id="humanScore" class="score-num">0</span>
+          </div>
+          <div class="score-card">
+            <span class="score-name">Computer</span>
+            <span id="computerScore" class="score-num">0</span>
+          </div>
+        </div>
+
+        <h2>Round History</h2>
+        <div class="results-list">
+          <p id="resultOfRound1" class="round-row"></p>
+          <p id="resultOfRound2" class="round-row"></p>
+          <p id="resultOfRound3" class="round-row"></p>
+          <p id="resultOfRound4" class="round-row"></p>
+          <p id="resultOfRound5" class="round-row"></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
